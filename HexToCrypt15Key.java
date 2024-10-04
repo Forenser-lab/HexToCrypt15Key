@@ -12,24 +12,24 @@ import java.io.*;
 
 public class HexToCrypt15Key {
     public static void main(String[] args) {
-        String outputFilePath = "chiave";
+        String outputFilePath = "key";
 
         if(args.length != 1) {
-            System.out.println("Usage: java -jar HexToCrypt15Key.jar hex-key-value (eg. java -jar HexToCrypt15Key.jar 1f2c7d101dc81fdf4be7223f0c7ef47e52d4b7cb46f6b14cd9ba4b9e25710576)");
+            System.out.println("Usage: java -jar HexToCrypt15Key.jar hex-key-value (e.g. java -jar HexToCrypt15Key.jar 1f2c7d101dc81fdf4be7223f0c7ef47e52d4b7cb46f6b14cd9ba4b9e25710576)");
             return;
         }
 
-        hexKey = args[0];
+        String hexKey = args[0];
 
         try {
             byte[] byteArray = hexStringToByteArray(hexKey);
 
             serializeByteArray(byteArray, outputFilePath);
 
-            System.out.println("File binario letto e serializzato con successo in '" + outputFilePath + "'.");
+            System.out.println("Binary file read and serialized successfully to '" + outputFilePath + "'.");
 
         } catch (IOException e) {
-            System.err.println("Errore durante la lettura o scrittura del file: " + e.getMessage());
+            System.err.println("Error during file reading or writing: " + e.getMessage());
         }
     }
 
