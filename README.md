@@ -1,12 +1,17 @@
-Script to obtain a key useful for decrypting a crypt15 backup starting from the hexadecimal value of the key shown on the WhatsApp application.
+This script helps you obtain a key useful for decrypting a Crypt15 backup using the hexadecimal value of the key shown in the WhatsApp application.
 
-Requirements: 
-- java installed
+## Requirements
 
-How-to:
+- Java installed
 
-1) add 64 bit WhatsApp key string to var "hexkey";
-2) compile the java file with "javac HexToCrypt15Key.java";
-3) run with "java HexToCrypt15Key"
+## How-to
 
-Enjoy!
+1. Aggiungi la stringa della chiave WhatsApp a 64 bit alla variabile `hexkey`.
+2. Compila il file Java con il seguente comando:
+   ```bash
+   javac HexToCrypt15Key.java
+3. Esegui il programma compilato con:
+   ```bash
+   java HexToCrypt15Key
+
+Enjoy
