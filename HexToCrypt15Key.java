@@ -1,9 +1,25 @@
 import java.io.*;
 
-public class BinaryFileReader {
+/**
+ * 
+ * compile: 
+ * javac HexToCrypt15Key.java
+ * "C:\Program Files\Java\jdk-21\bin\jar.exe" cfe HexToCrypt15Key.jar HexToCrypt15Key HexToCrypt15Key.class
+ * 
+ * execute:
+ * java -jar HexToCrypt15Key.jar 1f2c7d101dc81fdf4be7223f0c7ef47e52d4b7cb46f6b14cd9ba4b9e25710576
+ */
+
+public class HexToCrypt15Key {
     public static void main(String[] args) {
         String outputFilePath = "chiave";
-        String hexKey = "1f2c7d101dc81fdf4be7223f0c7ef47e52d4b7cb46f6b14cd9ba4b9e25710576";
+
+        if(args.length != 1) {
+            System.out.println("Usage: java -jar HexToCrypt15Key.jar hex-key-value (eg. java -jar HexToCrypt15Key.jar 1f2c7d101dc81fdf4be7223f0c7ef47e52d4b7cb46f6b14cd9ba4b9e25710576)");
+            return;
+        }
+
+        hexKey = args[0];
 
         try {
             byte[] byteArray = hexStringToByteArray(hexKey);
