@@ -2,7 +2,7 @@ This script helps you obtain a key useful for decrypting a Crypt15 backup using 
 
 ## Requirements
 
-- Java installed
+- Java installed (jdk)
 
 ## How-to
 
